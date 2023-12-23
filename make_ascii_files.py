@@ -20,12 +20,13 @@ Tristique senectus et netus et malesuada fames ac. Ut porttitor leo a diam solli
 
 Tortor condimentum lacinia quis vel eros. Dolor sit amet consectetur adipiscing elit duis tristique sollicitudin. Ut faucibus pulvinar elementum integer enim neque volutpat ac tincidunt. Lacinia at quis risus sed vulputate odio ut. A iaculis at erat pellentesque adipiscing. Quis enim lobortis scelerisque fermentum dui faucibus. Tristique magna sit amet purus. Posuere lorem ipsum dolor sit amet. Enim eu turpis egestas pretium aenean pharetra magna ac. Tempor orci eu lobortis elementum nibh tellus molestie nunc. Tellus in metus vulputate eu. Pharetra convallis posuere morbi leo. Libero enim sed faucibus turpis in eu mi bibendum neque. Quam lacus suspendisse faucibus interdum posuere. Tempus quam pellentesque nec nam. Pulvinar pellentesque habitant morbi tristique senectus et netus. Amet mauris commodo quis imperdiet massa. Leo integer malesuada nunc vel risus commodo viverra maecenas accumsan. Commodo elit at imperdiet dui accumsan sit amet. At tempor commodo ullamcorper a lacus vestibulum sed."""
 
-for copy in range(1, 5):
+for copy in range(1, 6):
     
     trgFile = f'subjects/Text file - {copy}.txt'
 
     with open(trgFile, 'w', encoding='ascii') as file:
-
-        file.write(content * copy)
+        data = content * copy
+        data += data[::-1]
+        file.write(data * copy)
         file.close()
 
